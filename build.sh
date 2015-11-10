@@ -1,5 +1,5 @@
 #!/bin/bash
-workspacename=ksbk.xcworkspace
+workspacename=FaceJoke.xcworkspace
 project=FaceJoke
 scheme=$project
 driver="iPhone 6"
