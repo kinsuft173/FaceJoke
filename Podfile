@@ -6,7 +6,6 @@ pod "VKVideoPlayer"
 pod "AsyncDisplayKit"
 pod "WebASDKImageManager"
 pod 'pop'
-pod "ReactiveCocoa"
 pod 'IQKeyboardManager'
 pod 'React'
 pod 'React/RCTText'
