@@ -1,2 +1,8 @@
 language: objective-c
-script: xctool test -workspace FaceJoke.xcworkspace -scheme FaceJoke -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: 
+	workspacename=FaceJoke.xcworkspace
+	project=FaceJoke
+	scheme=$project
+	driver="iPhone 6"
+
+	xcodebuild -configuration Debug -workspace $workspacename -scheme $scheme clean test -destination name="$driver"

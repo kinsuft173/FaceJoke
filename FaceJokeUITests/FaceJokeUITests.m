@@ -40,10 +40,10 @@
     [item2Button tap];
     
     XCUIElement *button = tabBarsQuery.buttons[@"居中"];
-    [button tap];
-    [item2Button tap];
-    [button tap];
-    [item2Button tap];
+//    [button tap];
+//    [item2Button tap];
+//    [button tap];
+//    [item2Button tap];
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
