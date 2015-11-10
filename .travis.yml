@@ -1,2 +1,5 @@
-language:objective-c
+language: objective-c
+before_install:
+     - brew update
+     - brew install xctool
 script:xctool test -workspace FaceJoke.xcworkspace -scheme FaceJoke -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
