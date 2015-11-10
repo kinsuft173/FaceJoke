@@ -10,6 +10,8 @@
 		0701C32EEFC0D7E17E666DD7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7AE6735981D16653A03485 /* libPods.a */; };
 		B91B81D01BE2F8A3000A899D /* FJFirstViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */; };
 		B91B81D11BE2F8A3000A899D /* FJFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */; };
+		B9E287571BF1DC1B00A0C03A /* JsonCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E287561BF1DC1B00A0C03A /* JsonCache.m */; };
+		B9E287591BF1DC6B00A0C03A /* HKJsonCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E287581BF1DC6B00A0C03A /* HKJsonCacheTest.m */; };
 		B9F129441BCE3FD2007039E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F129431BCE3FD2007039E4 /* main.m */; };
 		B9F129471BCE3FD2007039E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F129461BCE3FD2007039E4 /* AppDelegate.m */; };
 		B9F129531BCE3FD2007039E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F129511BCE3FD2007039E4 /* Main.storyboard */; };
@@ -51,6 +53,9 @@
 		B91B81CD1BE2F8A3000A899D /* FJFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFirstViewController.h; sourceTree = "<group>"; };
 		B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FJFirstViewController.mm; sourceTree = "<group>"; };
 		B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJFirstViewController.xib; sourceTree = "<group>"; };
+		B9E287551BF1DC1B00A0C03A /* JsonCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonCache.h; sourceTree = "<group>"; };
+		B9E287561BF1DC1B00A0C03A /* JsonCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonCache.m; sourceTree = "<group>"; };
+		B9E287581BF1DC6B00A0C03A /* HKJsonCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKJsonCacheTest.m; sourceTree = "<group>"; };
 		B9F1293F1BCE3FD2007039E4 /* FaceJoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceJoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F129431BCE3FD2007039E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9F129451BCE3FD2007039E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 			children = (
 				B9F129621BCE3FD2007039E4 /* FaceJokeTests.m */,
 				B9F129641BCE3FD2007039E4 /* Info.plist */,
+				B9E287581BF1DC6B00A0C03A /* HKJsonCacheTest.m */,
 			);
 			path = FaceJokeTests;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 		B9F129811BCE48CC007039E4 /* HKLib */ = {
 			isa = PBXGroup;
 			children = (
+				B9E287551BF1DC1B00A0C03A /* JsonCache.h */,
+				B9E287561BF1DC1B00A0C03A /* JsonCache.m */,
 				B9F1298E1BCE4A91007039E4 /* global.h */,
 				B9F129821BCE48E2007039E4 /* HKCommen.h */,
 				B9F129831BCE48E2007039E4 /* HKCommen.m */,
@@ -437,6 +445,7 @@
 				B9F1297F1BCE4848007039E4 /* RootViewCtrl.m in Sources */,
 				B9F129441BCE3FD2007039E4 /* main.m in Sources */,
 				B91B81D01BE2F8A3000A899D /* FJFirstViewController.mm in Sources */,
+				B9E287571BF1DC1B00A0C03A /* JsonCache.m in Sources */,
 				B9F129931BCE4B05007039E4 /* iToast.m in Sources */,
 				B9F129841BCE48E2007039E4 /* HKCommen.m in Sources */,
 			);
@@ -447,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F129631BCE3FD2007039E4 /* FaceJokeTests.m in Sources */,
+				B9E287591BF1DC6B00A0C03A /* HKJsonCacheTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
