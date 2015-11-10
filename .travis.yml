@@ -1,8 +1,2 @@
 language: objective-c
-script: 
-	workspacename=FaceJoke.xcworkspace
-	project=FaceJoke
-	scheme=$project
-	driver="iPhone 6"
-
-	xcodebuild -configuration Debug -workspace $workspacename -scheme $scheme clean test -destination name="$driver"
+script: xcodebuild -configuration Debug -workspace FaceJoke.xcworkspace -scheme FaceJoke clean test -destination name="iPhone 6"
