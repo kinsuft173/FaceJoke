@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0701C32EEFC0D7E17E666DD7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7AE6735981D16653A03485 /* libPods.a */; };
+		B91B81D01BE2F8A3000A899D /* FJFirstViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */; settings = {ASSET_TAGS = (); }; };
+		B91B81D11BE2F8A3000A899D /* FJFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		B9F129441BCE3FD2007039E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F129431BCE3FD2007039E4 /* main.m */; };
 		B9F129471BCE3FD2007039E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F129461BCE3FD2007039E4 /* AppDelegate.m */; };
 		B9F129531BCE3FD2007039E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F129511BCE3FD2007039E4 /* Main.storyboard */; };
@@ -46,6 +48,9 @@
 		0A7AE6735981D16653A03485 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC778CF6509BE9279F79535 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		748EEEACCAF9FB39F381DCAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B91B81CD1BE2F8A3000A899D /* FJFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFirstViewController.h; sourceTree = "<group>"; };
+		B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FJFirstViewController.mm; sourceTree = "<group>"; };
+		B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJFirstViewController.xib; sourceTree = "<group>"; };
 		B9F1293F1BCE3FD2007039E4 /* FaceJoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceJoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F129431BCE3FD2007039E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9F129451BCE3FD2007039E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 		B9F129411BCE3FD2007039E4 /* FaceJoke */ = {
 			isa = PBXGroup;
 			children = (
+				B9F129941BCE5564007039E4 /* 居家模块 */,
 				B9F1298F1BCE4AB4007039E4 /* thirdLib */,
 				B9F129811BCE48CC007039E4 /* HKLib */,
 				B9F1297B1BCE4829007039E4 /* LaunchCtrl */,
@@ -220,6 +226,17 @@
 				B9F129921BCE4B05007039E4 /* iToast.m */,
 			);
 			path = iTostView;
+			sourceTree = "<group>";
+		};
+		B9F129941BCE5564007039E4 /* 居家模块 */ = {
+			isa = PBXGroup;
+			children = (
+				B91B81CD1BE2F8A3000A899D /* FJFirstViewController.h */,
+				B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */,
+				B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */,
+			);
+			name = "居家模块";
+			path = "首页模块";
 			sourceTree = "<group>";
 		};
 		D16DDB5629397981614CDF1C /* Pods */ = {
@@ -340,6 +357,7 @@
 				B9F129801BCE4848007039E4 /* RootViewCtrl.xib in Resources */,
 				B9F1298B1BCE49EF007039E4 /* default_2.png in Resources */,
 				B9F129551BCE3FD2007039E4 /* Assets.xcassets in Resources */,
+				B91B81D11BE2F8A3000A899D /* FJFirstViewController.xib in Resources */,
 				B9F1298A1BCE49EF007039E4 /* default_1.png in Resources */,
 				B9F129531BCE3FD2007039E4 /* Main.storyboard in Resources */,
 				B9F1298D1BCE49EF007039E4 /* default_4.png in Resources */,
@@ -404,6 +422,7 @@
 				B9F129471BCE3FD2007039E4 /* AppDelegate.m in Sources */,
 				B9F1297F1BCE4848007039E4 /* RootViewCtrl.m in Sources */,
 				B9F129441BCE3FD2007039E4 /* main.m in Sources */,
+				B91B81D01BE2F8A3000A899D /* FJFirstViewController.mm in Sources */,
 				B9F129931BCE4B05007039E4 /* iToast.m in Sources */,
 				B9F129841BCE48E2007039E4 /* HKCommen.m in Sources */,
 			);

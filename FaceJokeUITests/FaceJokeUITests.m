@@ -34,6 +34,16 @@
 
 - (void)testExample {
     // Use recording to get started writing UI tests.
+    
+    XCUIElementQuery *tabBarsQuery = [[XCUIApplication alloc] init].tabBars;
+    XCUIElement *item2Button = tabBarsQuery.buttons[@"Item 2"];
+    [item2Button tap];
+    
+    XCUIElement *button = tabBarsQuery.buttons[@"居中"];
+    [button tap];
+    [item2Button tap];
+    [button tap];
+    [item2Button tap];
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 

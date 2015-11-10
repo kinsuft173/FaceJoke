@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="853" y="-145"/>
         </scene>
-        <!--Item 1-->
+        <!--居家-->
         <scene sceneID="CfL-fX-sHr">
             <objects>
                 <viewController id="7Qx-Qz-vM5" sceneMemberID="viewController">
@@ -54,11 +54,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ryo-4n-LVm"/>
+                    <tabBarItem key="tabBarItem" title="居家" id="ryo-4n-LVm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huf-wT-gHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853" y="-836"/>
+            <point key="canvasLocation" x="586" y="-848"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iH2-Li-L8s">
