@@ -8,6 +8,7 @@
 
 #import "RootViewCtrl.h"
 #import "HKCommen.h"
+#import "AFNetworking.h"
 
 #define PageNumberOfScrollView 4
 
@@ -36,6 +37,8 @@
         
         [self goToMainUI];
         
+        [self testHttps];
+        
     }else{
         
         NSLog(@"test");
@@ -47,6 +50,28 @@
     }
     
     
+}
+
+- (void)testHttps
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer=[AFHTTPRequestSerializer serializer];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+
+    [manager POST:[NSString stringWithFormat:@"https://www.cfca.com.cn"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"response = %@",responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        //ErrorHandle(error);
+        
+        NSLog(@"错误: %@", error);
+        
+    }];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
