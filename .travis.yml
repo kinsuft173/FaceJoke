@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode7
-xcode_workspace: FaceJoke.workspace # path to your xcodeproj folder
+xcode_workspace: FaceJoke.xcworkspace # path to your xcodeproj folder
 xcode_scheme: FaceJoke
