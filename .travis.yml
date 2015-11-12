@@ -2,5 +2,5 @@ language: objective-c
 osx_image: xcode7
 xcode_workspace: FaceJoke.xcworkspace
 xcode_scheme: FaceJoke
-script:
-  - xcodebuild -workspace FaceJoke.xcworkspace -scheme FaceJoke build test CODE_SIGNING_REQUIRED=NO
+# script:
+#   - xcodebuild -workspace FaceJoke.xcworkspace -scheme FaceJoke build test CODE_SIGNING_REQUIRED=NO
