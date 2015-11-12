@@ -58,8 +58,13 @@
     manager.requestSerializer=[AFHTTPRequestSerializer serializer];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
     
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    //解决“Error Domain=NSURLErrorDomain Code=-1012 "The operation couldn’t be completed.”的问题，AFNetworking 2.0默认在检查SSL证书的时候比较严格
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
 
-    [manager POST:[NSString stringWithFormat:@"https://www.cfca.com.cn"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:[NSString stringWithFormat:@"https://mc.kswiki.net/kswiki/api/video/fetch"] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"response = %@",responseObject);
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0701C32EEFC0D7E17E666DD7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7AE6735981D16653A03485 /* libPods.a */; };
+		B915BD071BF42331007234B3 /* sercer.cer in Resources */ = {isa = PBXBuildFile; fileRef = B915BD061BF42331007234B3 /* sercer.cer */; };
 		B91B81D01BE2F8A3000A899D /* FJFirstViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */; };
 		B91B81D11BE2F8A3000A899D /* FJFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */; };
 		B9263C211BF33A8400295B3D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9263BFC1BF33A8400295B3D /* AFHTTPRequestOperation.m */; };
@@ -67,6 +68,7 @@
 		0A7AE6735981D16653A03485 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC778CF6509BE9279F79535 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		748EEEACCAF9FB39F381DCAE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B915BD061BF42331007234B3 /* sercer.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = sercer.cer; sourceTree = "<group>"; };
 		B91B81CD1BE2F8A3000A899D /* FJFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFirstViewController.h; sourceTree = "<group>"; };
 		B91B81CE1BE2F8A3000A899D /* FJFirstViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FJFirstViewController.mm; sourceTree = "<group>"; };
 		B91B81CF1BE2F8A3000A899D /* FJFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJFirstViewController.xib; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		B9F129421BCE3FD2007039E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B915BD061BF42331007234B3 /* sercer.cer */,
 				B9263C321BF33A9F00295B3D /* faceJoke-Prefix.pch */,
 				B9F129431BCE3FD2007039E4 /* main.m */,
 			);
@@ -475,6 +478,7 @@
 				B9F129801BCE4848007039E4 /* RootViewCtrl.xib in Resources */,
 				B9F1298B1BCE49EF007039E4 /* default_2.png in Resources */,
 				B9F129551BCE3FD2007039E4 /* Assets.xcassets in Resources */,
+				B915BD071BF42331007234B3 /* sercer.cer in Resources */,
 				B91B81D11BE2F8A3000A899D /* FJFirstViewController.xib in Resources */,
 				B9F1298A1BCE49EF007039E4 /* default_1.png in Resources */,
 				B9F129531BCE3FD2007039E4 /* Main.storyboard in Resources */,
