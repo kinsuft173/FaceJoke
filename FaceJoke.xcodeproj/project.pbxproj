@@ -545,7 +545,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "python ${SRCROOT}/build_scripts/export_build_vars.py object_file_dir=${OBJECT_FILE_DIR}-normal/x86_64 build_dir=${OBJROOT}\necho ${OBJECT_FILE_DIR}-normal/x86_64 > ${SRCROOT}/object_file_dir";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
