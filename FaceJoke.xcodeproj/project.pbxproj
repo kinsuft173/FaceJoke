@@ -47,6 +47,18 @@
 		B9F129931BCE4B05007039E4 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F129921BCE4B05007039E4 /* iToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		B915BD081BF47D8F007234B3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		B9F1295F1BCE3FD2007039E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -400,6 +412,7 @@
 				B9E287541BF1D07100A0C03A /* ShellScript */,
 			);
 			buildRules = (
+				B915BD081BF47D8F007234B3 /* PBXBuildRule */,
 			);
 			dependencies = (
 				B9F129601BCE3FD2007039E4 /* PBXTargetDependency */,
