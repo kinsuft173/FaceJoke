@@ -9,4 +9,4 @@ script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xctool -workspace FaceJoke.xcworkspace -scheme "$TEST_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test | xcpretty -c
+  - xcodebuild -workspace FaceJoke.xcworkspace -scheme "$TEST_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test | xcpretty -c
