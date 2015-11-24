@@ -8,6 +8,8 @@
 
 #import "FJFirstViewController.h"
 #import <ComponentKit.h>
+#import "News.h"
+#import "InteractiveNewsComponent.h"
 
 @interface FJFirstViewController ()
 
@@ -28,7 +30,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if (self = [super initWithCollectionViewLayout:layout]) {
         _sizeRangeProvider = [CKComponentFlexibleSizeRangeProvider providerWithFlexibility:CKComponentSizeRangeFlexibleHeight];
         //        _quoteModelController = [[QuoteModelController alloc] init];
-        self.title = @"家居中心";
+        self.title = @"News";
         
     }
     
@@ -42,10 +44,29 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView.backgroundColor = [UIColor yellowColor];
+    self.collectionView.delegate = self;
     
-    // Do any additional setup after loading the view.
+    _dataSource = [[CKCollectionViewDataSource alloc] initWithCollectionView:self.collectionView
+                                                 supplementaryViewDataSource:nil
+                                                           componentProvider:[self class]
+                                                                     context:nil
+                                                   cellConfigurationFunction:nil];
+    
+    CKArrayControllerSections sections;
+    sections.insert(0);
+    [_dataSource enqueueChangeset:{sections, {}} constrainedSize:{}];
+    
+    CKArrayControllerInputItems items;
+    items.insert([NSIndexPath indexPathForRow:0 inSection:0], @"hehe");
+    items.insert([NSIndexPath indexPathForRow:1 inSection:0], @"hehe");
+    items.insert([NSIndexPath indexPathForRow:2 inSection:0], @"hehe");
+    items.insert([NSIndexPath indexPathForRow:3 inSection:0], @"hehe");
+    [_dataSource enqueueChangeset:{{}, items}
+                  constrainedSize:[_sizeRangeProvider sizeRangeForBoundingSize:self.collectionView.bounds.size]];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,38 +74,45 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UICollectionViewDelegateFlowLayout
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [_dataSource sizeForItemAtIndexPath:indexPath];
 }
 
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+- (void)collectionView:(UICollectionView *)collectionView
+       willDisplayCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_dataSource announceWillAppearForItemInCell:cell];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+- (void)collectionView:(UICollectionView *)collectionView
+  didEndDisplayingCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_dataSource announceDidDisappearForItemInCell:cell];
+}
+#pragma mark - CKComponentProvider
+
++ (CKComponent *)componentForModel:(News*)news context:(NSObject *)context
+{
+    return [InteractiveNewsComponent
+            newWithNotify:news context:context];
     
-    // Configure the cell
-    
-    return cell;
+//       return  [CKLabelComponent
+//         newWithLabelAttributes:{
+//             .string = @"ejejej",
+//             .font = [UIFont fontWithName:@"Baskerville" size:30]
+//         }
+//         viewAttributes:{
+//             {@selector(setBackgroundColor:), [UIColor clearColor]},
+//             {@selector(setUserInteractionEnabled:), @NO},
+//         }];
 }
-
-#pragma mark <UICollectionViewDelegate>
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

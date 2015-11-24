@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='4' failures='0'>
+  <testsuite name='FaceJokeTests' tests='2' failures='0'>
+    <testcase classname='FaceJokeTests' name='testExample' time='0.002'/>
+    <testcase classname='FaceJokeTests' name='testPerformanceExample' time='0.506'/>
+  </testsuite>
+  <testsuite name='HKJsonCacheTest' tests='1' failures='0'>
+    <testcase classname='HKJsonCacheTest' name='testJsonCache' time='0.006'/>
+  </testsuite>
+  <testsuite name='FaceJokeUITests' tests='1' failures='0'>
+    <testcase classname='FaceJokeUITests' name='testExample' time='14.637'/>
+  </testsuite>
+</testsuites>

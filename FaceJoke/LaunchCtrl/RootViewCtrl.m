@@ -9,6 +9,7 @@
 #import "RootViewCtrl.h"
 #import "HKCommen.h"
 #import "AFNetworking.h"
+#import "FJFirstViewController.h"
 
 #define PageNumberOfScrollView 4
 
@@ -19,7 +20,7 @@
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, strong) UIButton* btnStart;
 
-@property (nonatomic, strong) UIViewController* firstMainFlowCtrl;
+@property (nonatomic, strong) UITabBarController* firstMainFlowCtrl;
 @property (nonatomic, strong) UIPageControl* pageControl;
 
 @end
@@ -169,13 +170,29 @@
 
 - (void)goToMainUI
 {
-    UIStoryboard* storyboardMain = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    self.firstMainFlowCtrl = [storyboardMain instantiateViewControllerWithIdentifier:@"firstMainFlowCtrl"];
-    self.firstMainFlowCtrl.view.userInteractionEnabled = YES;
-    
-    [self.view addSubview:self.firstMainFlowCtrl.view];
-    
+//    UIStoryboard* storyboardMain = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+  self.firstMainFlowCtrl = [[UITabBarController
+          alloc] init]; //[storyboardMain
+                        //instantiateViewControllerWithIdentifier:@"firstMainFlowCtrl"];
+  self.firstMainFlowCtrl.view.userInteractionEnabled = YES;
+
+  UICollectionViewFlowLayout *flowLayout =
+      [[UICollectionViewFlowLayout alloc] init];
+  [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+  [flowLayout setMinimumInteritemSpacing:0];
+  [flowLayout setMinimumLineSpacing:0];
+
+  FJFirstViewController *vc =
+      [[FJFirstViewController alloc] initWithCollectionViewLayout:flowLayout];
+  vc.hidesBottomBarWhenPushed = YES;
+
+  UINavigationController *nav1 =
+      [[UINavigationController alloc] initWithRootViewController:vc];
+
+  self.firstMainFlowCtrl.viewControllers = [NSArray arrayWithObjects:nav1, nil];
+
+  [self.view addSubview:self.firstMainFlowCtrl.view];
 }
 
 
